@@ -23,6 +23,8 @@ use pocketmine\inventory\Inventory;
 
 class Main extends PluginBase implements Listener {
 
+    private $config;
+    
     public function onEnable():void{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->config = new Config($this->getDataFolder()."Protection.yml", Config::YAML);
